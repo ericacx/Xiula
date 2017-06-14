@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016. Tripint Information Technology Co., Ltd. All rights reserved. *
+  ~ Authors:lirichen
+  ~ File:common_empty_data_list.xml
+  ~ This software, including documentation, is protected by copyright controlled
+  ~ by Tripint Information Technology Co., Ltd. All rights are reserved. */
+  -->
+
+<FrameLayout android:id="@+id/loading_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/dp_40">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_empty_data_list"
+        />
+
+
+</FrameLayout>

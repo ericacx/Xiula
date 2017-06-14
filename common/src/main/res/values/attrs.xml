@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingView">
+        <attr name="loading_renderer">
+            <!--circle rotate-->
+            <enum name="MaterialLoadingRenderer" value="0" />
+            <enum name="LevelLoadingRenderer" value="1" />
+            <enum name="WhorlLoadingRenderer" value="2" />
+            <enum name="GearLoadingRenderer" value="3" />
+            <!--circle jump-->
+            <enum name="SwapLoadingRenderer" value="4" />
+            <enum name="GuardLoadingRenderer" value="5" />
+            <enum name="DanceLoadingRenderer" value="6" />
+            <enum name="CollisionLoadingRenderer" value="7" />
+            <!--Scenery-->
+            <enum name="DayNightLoadingRenderer" value="8" />
+            <enum name="ElectricFanLoadingRenderer" value="9" />
+            <!--Animal-->
+            <enum name="FishLoadingRenderer" value="10" />
+            <enum name="GhostsEyeLoadingRenderer" value="11" />
+            <!--Goods-->
+            <enum name="BalloonLoadingRenderer" value="12" />
+            <enum name="WaterBottleLoadingRenderer" value="13" />
+            <!--ShapeChange-->
+            <enum name="CircleBroodLoadingRenderer" value="14" />
+            <enum name="CoolWaitLoadingRenderer" value="15" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FlipView">
+        <attr name="orientation" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+        <attr name="overFlipMode" format="enum">
+            <enum name="glow" value="0" />
+            <enum name="rubber_band" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PtrFrameLayout">
+        <!-- Optional. If you put header and content in xml, you can you these to specify them. -->
+        <attr name="ptr_header" format="reference" />
+        <attr name="ptr_content" format="reference" />
+
+        <!-- the resistance when you are moving the frame -->
+        <attr name="ptr_resistance" format="float" />
+
+        <!-- the ration of the height of the header to trigger refresh -->
+        <attr name="ptr_ratio_of_header_height_to_refresh" format="float" />
+
+        <attr name="ptr_duration_to_close" format="integer" />
+        <attr name="ptr_duration_to_close_header" format="integer" />
+
+        <!-- pull to refresh, otherwise release to refresh, default is release to refresh -->
+        <attr name="ptr_pull_to_fresh" format="boolean" />
+
+        <!-- keep header when refreshing-->
+        <attr name="ptr_keep_header_when_refresh" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PtrClassicHeader">
+        <attr name="ptr_rotate_ani_time" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RobotoTextView">
+        <attr name="typeface" />
+    </declare-styleable>
+
+    <declare-styleable name="CountDownView">
+        <attr name="showHour" format="boolean" />
+        <attr name="showMin" format="boolean" />
+        <attr name="showSec" format="boolean" />
+        <attr name="showMilli" format="boolean" />
+        <attr name="numberColor" format="reference" />
+        <attr name="unitColor" format="reference" />
+    </declare-styleable>
+
+    <!-- Changing the attribute must be reflected in the com.devspark.robototextview.widget.RobotoTextView -->
+    <attr name="typeface" format="enum">
+        <enum name="roboto_thin" value="0" />
+        <!--<enum name="roboto_thin_italic" value="1"/>-->
+        <!--<enum name="roboto_light" value="2"/>-->
+        <!--<enum name="roboto_light_italic" value="3"/>-->
+        <!--<enum name="roboto_regular" value="4"/>-->
+        <!--<enum name="roboto_italic" value="5"/>-->
+        <!--<enum name="roboto_medium" value="6"/>-->
+        <!--<enum name="roboto_medium_italic" value="7"/>-->
+        <!--<enum name="roboto_bold" value="8"/>-->
+        <!--<enum name="roboto_bold_italic" value="9"/>-->
+        <!--<enum name="roboto_black" value="10"/>-->
+        <!--<enum name="roboto_black_italic" value="11"/>-->
+        <!--<enum name="roboto_condensed" value="12"/>-->
+        <!--<enum name="roboto_condensed_italic" value="13"/>-->
+        <!--<enum name="roboto_condensed_bold" value="14"/>-->
+        <!--<enum name="roboto_condensed_bold_italic" value="15"/>-->
+        <!--<enum name="robotoslab_thin" value="16"/>-->
+        <!--<enum name="robotoslab_light" value="17"/>-->
+        <!--<enum name="robotoslab_regular" value="18"/>-->
+        <!--<enum name="robotoslab_bold" value="19"/>-->
+    </attr>
+
+    <declare-styleable name="RoundCornerProgress">
+        <attr name="rcReverse" format="boolean" />
+        <attr name="rcProgress" format="float" />
+        <attr name="rcMax" format="float" />
+        <attr name="rcSecondaryProgress" format="float" />
+        <attr name="rcBackgroundPadding" format="dimension" />
+        <attr name="rcRadius" format="dimension" />
+        <attr name="rcProgressColor" format="color" />
+        <attr name="rcSecondaryProgressColor" format="color" />
+        <attr name="rcBackgroundColor" format="color" />
+        <attr name="rcBackgroundDrawable" format="integer" />
+
+    </declare-styleable>
+
+    <declare-styleable name="IconRoundCornerProgress">
+        <attr name="rcIconSrc" format="integer" />
+        <attr name="rcIconSize" format="dimension" />
+        <attr name="rcIconWidth" format="dimension" />
+        <attr name="rcIconHeight" format="dimension" />
+        <attr name="rcIconPadding" format="dimension" />
+        <attr name="rcIconPaddingLeft" format="dimension" />
+        <attr name="rcIconPaddingRight" format="dimension" />
+        <attr name="rcIconPaddingTop" format="dimension" />
+        <attr name="rcIconPaddingBottom" format="dimension" />
+        <attr name="rcIconBackgroundColor" format="color" />
+        <attr name="rcTextProgressColor" format="color" />
+        <attr name="rcTextProgressSize" format="dimension" />
+        <attr name="rcTextProgressMargin" format="dimension" />
+        <attr name="rcTextProgress" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomBar">
+        <attr name="bb_tabXmlResource" format="reference" />
+        <attr name="bb_tabletMode" format="boolean" />
+        <attr name="bb_behavior">
+            <flag name="shifting" value="1" />
+            <flag name="shy" value="2" />
+            <flag name="underNavbar" value="4" />
+        </attr>
+        <attr name="bb_inActiveTabAlpha" format="float" />
+        <attr name="bb_activeTabAlpha" format="float" />
+        <attr name="bb_inActiveTabColor" format="color" />
+        <attr name="bb_activeTabColor" format="color" />
+        <attr name="bb_badgeBackgroundColor" format="color" />
+        <attr name="bb_titleTextAppearance" format="reference" />
+        <attr name="bb_titleTypeFace" format="string" />
+        <attr name="bb_showShadow" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonTabLayout">
+        <attr name="tl_textsize" format="dimension"/>
+        <attr name="tl_textSelectColor" format="reference"/>
+        <attr name="tl_textUnSelectColor" format="reference"/>
+        <attr name="tl_iconVisible" format="boolean"/>
+        <attr name="tl_iconHeight" format="dimension"/>
+        <attr name="tl_iconWidth" format="dimension"/>
+        <attr name="tl_iconMargin" format="dimension"/>
+        <attr name="tl_iconGravity">
+            <enum name="LEFT" value="17"/>
+            <enum name="TOP" value="18"/>
+            <enum name="RIGHT" value="19"/>
+            <enum name="BOTTOM" value="20"/>
+        </attr>
+        <attr name="tl_tabPadding" format="dimension"/>
+        <attr name="tl_padding" format="dimension"/>
+
+        <!-- indicator -->
+        <attr name="tl_indicatorColor" format="color"/>
+        <attr name="tl_indicatorHeight" format="dimension"/>
+        <attr name="tl_indicatorWidth" format="reference"/>
+        <attr name="tl_indicatorMarginLeft" format="reference"/>
+        <attr name="tl_indicatorMarginTop" format="dimension"/>
+        <attr name="tl_indicatorMarginRight" format="dimension"/>
+        <attr name="tl_indicatorMarginBottom" format="dimension"/>
+        <attr name="tl_indicatorGravity">
+            <flag name="INDICATOR_LEFT" value="0x1001"/>
+            <flag name="INDICATOR_TOP" value="0x1002"/>
+            <flag name="INDICATOR_RIGHT" value="0x1003"/>
+            <flag name="INDICATOR_BOTTOM" value="0x1004"/>
+        </attr>
+        <attr name="tl_indicatorEnable" format="boolean"/>
+        <attr name="tl_indicatorAnimEnable" format="boolean"/>
+    </declare-styleable>
+</resources>

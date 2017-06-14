@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016. Tripint Information Technology Co., Ltd. All rights reserved. *
+  ~ Authors:lirichen
+  ~ File:provider_paths.xml
+  ~ This software, including documentation, is protected by copyright controlled
+  ~ by Tripint Information Technology Co., Ltd. All rights are reserved. */
+  -->
+
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="pic" path="Pictures/"/>
+    <external-path name="file" path="Intersight/"/>
+</paths>

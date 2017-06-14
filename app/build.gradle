@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+        release {
+
+        }
+
+        debug {
+
+        }
+    }
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        jumboMode true
+    }
+    defaultConfig {
+        applicationId "com.taorenqi.xiula"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+
+        multiDexEnabled true
+        signingConfig signingConfigs.debug
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+
+    }
+}
+
+dependencies {
+    compile project(':data')
+    compile project(':common')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:${ANDROID_SUPPORT}"
+    compile "com.android.support:support-v4:${ANDROID_SUPPORT}"
+    compile "com.android.support:design:${ANDROID_SUPPORT}"
+    compile "com.android.support:cardview-v7:${ANDROID_SUPPORT}"
+    compile "com.android.support:multidex:${MULTIDEX}"
+    compile "io.reactivex:rxjava:${RXJAVA}"
+    compile "io.reactivex:rxandroid:${RXJAVA}"
+    compile "com.squareup.retrofit2:retrofit:${RETROFIT}"
+    compile "com.squareup.retrofit2:converter-jackson:${RETROFIT}"
+    compile "com.squareup.retrofit2:adapter-rxjava:${RETROFIT}"
+    compile "com.android.support.constraint:constraint-layout:${CONSTRAINT}"
+    testCompile "junit:junit:${JUNIT}"
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.tencent.bugly:crashreport:2.2.0'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:1.2.0'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.umeng.analytics:analytics:6.0.1'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    compile 'com.yanzhenjie:album:1.0.6'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+}
